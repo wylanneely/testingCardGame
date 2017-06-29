@@ -15,6 +15,7 @@
 		B20EC97C1F048CB500F761E2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20EC97B1F048CB500F761E2 /* Card.swift */; };
 		B20EC97E1F04931000F761E2 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20EC97D1F04931000F761E2 /* Deck.swift */; };
 		B20EC9801F04965400F761E2 /* DeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20EC97F1F04965400F761E2 /* DeckController.swift */; };
+		B285B3241F04AAAD00CCCDBE /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285B3231F04AAAD00CCCDBE /* CardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		B20EC97B1F048CB500F761E2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B20EC97D1F04931000F761E2 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		B20EC97F1F04965400F761E2 /* DeckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckController.swift; sourceTree = "<group>"; };
+		B285B3231F04AAAD00CCCDBE /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		B20EC97A1F048C6700F761E2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B285B3231F04AAAD00CCCDBE /* CardViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				B20EC97E1F04931000F761E2 /* Deck.swift in Sources */,
 				B20EC97C1F048CB500F761E2 /* Card.swift in Sources */,
 				B20EC9801F04965400F761E2 /* DeckController.swift in Sources */,
+				B285B3241F04AAAD00CCCDBE /* CardViewController.swift in Sources */,
 				B20EC9581F0489E600F761E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +453,7 @@
 				B20EC9731F0489E600F761E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B20EC9741F0489E600F761E2 /* Build configuration list for PBXNativeTarget "CardGameTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +462,7 @@
 				B20EC9761F0489E600F761E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
