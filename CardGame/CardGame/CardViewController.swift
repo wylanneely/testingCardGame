@@ -1,3 +1,4 @@
+
 //
 //  CardViewController.swift
 //  CardGame
@@ -12,19 +13,60 @@ class CardViewController: UIViewController {
     
       override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
-    let deck = Deck()
+    var p1DeckController = DeckController()
+    var p2DeckController = DeckController()
+    
+    let p1deck = Deck()
+    let p2deck = Deck()
+    
+    @IBOutlet weak var player2CardLabel: UILabel!
+    @IBOutlet weak var player1CardLabel: UILabel!
+    @IBOutlet weak var player2ScoreLabel: UILabel!
+    @IBOutlet weak var player1ScoreLabel: UILabel!
     
     
-    @IBOutlet weak var cardLabel: UILabel!
+    var player1Score: Int = 0
+    var player2Score: Int = 0
+    
     @IBAction func drawButtonTapped(_ sender: Any) {
         
-       let card = DeckController.shared.drawOneCard(deck: deck)
+       let p1Card = p1DeckController.drawOneCard(deck: p1deck)
+        player1CardLabel.text = p1Card.suit
+        if p1Card.color == "red" {
+            player1CardLabel.textColor = .red
+        }
+        if p1Card.color == "black" {
+            player1CardLabel.textColor = .black
+        }
         
-        cardLabel.text = card.suit
         
+        let p2Card = p2DeckController.drawOneCard(deck: p2deck)
+        player2CardLabel.text = p2Card.suit
+        
+        if p2Card.color == "red" {
+            player2CardLabel.textColor = .red
+        }
+        if p2Card.color == "black" {
+            player1CardLabel.textColor = .black
+        }
+        compareWinner(card1: p1Card, card2: p2Card)
+        
+        player1ScoreLabel.text = "Player 1: \(player1Score)"
+        player2ScoreLabel.text = "Player 2: \(player2Score)"
+        
+        
+    }
+    
+    func compareWinner(card1: Card, card2: Card){
+        if card1.value > card2.value {
+            player1Score = player1Score + 1
+        }
+        
+        if card2.value > card1.value {
+            player2Score = player2Score + 1
+        }
         
         
     }

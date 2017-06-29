@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ryb-Es-04R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ryb-Es-04R">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,14 +21,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cardLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqE-1c-S7i">
-                                <rect key="frame" x="149.5" y="323" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ERb-vB-CYb">
+                                <rect key="frame" x="138" y="255.5" width="99" height="157"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player2score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-CO-dUf">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player2card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivx-lW-clE" userLabel="Player2CardLabel">
+                                        <rect key="frame" x="4.5" y="45.5" width="90.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player1Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqE-1c-S7i">
+                                        <rect key="frame" x="4" y="91" width="91" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player1score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFI-Np-qak">
+                                        <rect key="frame" x="1.5" y="136.5" width="96.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xar-ww-QSL">
-                                <rect key="frame" x="169" y="364" width="36" height="30"/>
+                                <rect key="frame" x="169" y="537" width="36" height="30"/>
                                 <state key="normal" title="Draw"/>
                                 <connections>
                                     <action selector="drawButtonTapped:" destination="ryb-Es-04R" eventType="touchUpInside" id="pNx-oz-ZFU"/>
@@ -37,19 +60,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HqE-1c-S7i" firstAttribute="centerY" secondItem="SVn-rP-iqp" secondAttribute="centerY" id="fkl-aP-jyK"/>
-                            <constraint firstItem="Xar-ww-QSL" firstAttribute="centerX" secondItem="SVn-rP-iqp" secondAttribute="centerX" id="u39-eY-Gca"/>
-                            <constraint firstItem="HqE-1c-S7i" firstAttribute="centerX" secondItem="SVn-rP-iqp" secondAttribute="centerX" id="uG6-20-oJf"/>
-                            <constraint firstItem="Xar-ww-QSL" firstAttribute="top" secondItem="HqE-1c-S7i" secondAttribute="bottom" constant="20" id="whu-NE-kcn"/>
+                            <constraint firstItem="ERb-vB-CYb" firstAttribute="centerX" secondItem="SVn-rP-iqp" secondAttribute="centerX" id="Ll3-y4-v5V"/>
+                            <constraint firstItem="hup-Cc-CcJ" firstAttribute="top" secondItem="Xar-ww-QSL" secondAttribute="bottom" constant="100" id="YxC-MA-FbO"/>
+                            <constraint firstItem="Xar-ww-QSL" firstAttribute="centerX" secondItem="SVn-rP-iqp" secondAttribute="centerX" id="Zqd-Rn-Eq5"/>
+                            <constraint firstItem="ERb-vB-CYb" firstAttribute="centerY" secondItem="SVn-rP-iqp" secondAttribute="centerY" id="xIv-yD-UGi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mcC-cu-7Fk"/>
                     <connections>
-                        <outlet property="cardLabel" destination="HqE-1c-S7i" id="yMC-mf-XT3"/>
+                        <outlet property="player1CardLabel" destination="HqE-1c-S7i" id="Lhc-MB-OcL"/>
+                        <outlet property="player1ScoreLabel" destination="eFI-Np-qak" id="BY5-p8-le2"/>
+                        <outlet property="player2CardLabel" destination="Ivx-lW-clE" id="U6J-iE-6rL"/>
+                        <outlet property="player2ScoreLabel" destination="tT5-CO-dUf" id="spV-dV-ENT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpR-JZ-ozx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="90"/>
+            <point key="canvasLocation" x="736.79999999999995" y="89.505247376311857"/>
         </scene>
     </scenes>
 </document>
